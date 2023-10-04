@@ -19,8 +19,8 @@
       <div class="col s12" style="padding: 0px !important; position: fixed; z-index: 100;">
         <ul class="tabs blue-grey">
           <li class="tab col s4"><a href="#tab-sniper" class="active">SNIPER</a></li>
-          <li class="tab col s4"><a href="#tab-config">CONFIGURACIÓN</a></li>
-          <li class="tab col s4"><a href="#tab-help">AYUDA</a></li>
+          <li class="tab col s4"><a href="#tab-config">Configuration</a></li>
+          <li class="tab col s4"><a href="#tab-help">HELP</a></li>
         </ul>
       </div>
 
@@ -28,26 +28,18 @@
         <div id="init_btn_parent" class="row save-btn">
           <div id="btn_start" class="row hiddendiv" style="margin-left: 33%;">
             <button id="init_text" class="waves-effect waves-light btn blue-grey modal-trigger col s6"
-              href="#modal_init">EMPEZAR</button>
+              href="#modal_init">Start</button>
           </div>
           <div class="row center feedback_loader">
-            <span><span id="bot_init_text"></span>has seleccionado la red <span textid="selected-network"></span> Ve a
-              la pestaña
-              CONFIGURACIÓN
-              para cambiar la red seleccionada,
-              agregar tu dirección y otros datos importantes que necesita el bot para trabajar correctamente.</span>
-            <br><br><span id="running_loader_text" class="hiddendiv">Monitorizando la red en buscar de tokens nuevos con
-              liquidez igual o superior a <span id="min_liquidity_text"></span></span>
+            <span><span id="bot_init_text"></span>you have selected the network <span textid="selected-network"></span> Go to the CONFIGURATION tab to change the selected network, add your address and other important data that the bot needs to work correctly.</span>
+            <br><br><span id="running_loader_text" class="hiddendiv">Monitoring the network in search of new tokens with liquidity equal to or greater than<span id="min_liquidity_text"></span></span>
             <div id="running_loader" class="progress hiddendiv">
               <div class="indeterminate"></div>
             </div>
           </div>
         </div>
         <div id="sniper_not_tokens" class="inner-content-tab hiddendiv">
-          Aun no has guardado ningún token. Configura y ejecuta el bot si quieres empezar a guardar y comprar tokens
-          y de paso
-          generar
-          el historial de transacciones
+          You have not saved any tokens yet. Configure and run the bot if you want to start saving and buying tokens and incidentally generate the transaction history
         </div>
         <ul class="collapsible hiddendiv" style="margin-top: 50px; margin-bottom: 20%;"></ul>
       </div>
@@ -55,7 +47,7 @@
       <div id="tab-config" class="tab-content col s12">
         <div class="row">
           <div class="col s12">
-            <h6 class="inner-title-config">Cuenta y Blockchain</h6>
+            <h6 class="inner-title-config">Account and Blockchain</h6>
             <div class="row">
               <div class="input-field col s3">
                 <select class="icons" id="networks">
@@ -74,82 +66,72 @@
               </div>
               <div class="input-field col s3">
                 <input id="network_time" placeholder="" type="number" class="validate">
-                <label for="network_time">Tiempo de espera del WSS simulado</label>
-                <span class="helper-text">El tiempo que debe
-                  espera el bot por cada monitoreo (segundos)</span>
+                <label for="network_time">Waiting time of the simulated WSS</label>
+                <span class="helper-text">The time the bot should wait for each monitoring (seconds)</span>
               </div>
               <div class="col s3">
                 <p>
                   <label class="tooltipped" data-position="top"
-                    data-tooltip="Con esta opción el bot te habilita un botón para que puedas comprar el token facilmente.">
+                    data-tooltip="With this option, the bot enables a button for you to easily buy the token.">
                     <input id="save_and_buy" name="buy_group" type="radio" />
-                    <span>Guardar y comprar</span>
+                    <span>Save and Buy</span>
                   </label>
                 </p>
                 <p>
                   <label class="tooltipped" data-position="bottom"
                     data-tooltip="Con esta opción el bot no te habilita ningún botón de comprar, solo te muestra información del token.">
                     <input id="just_save" name="buy_group" type="radio" checked />
-                    <span>Sólo guardar</span>
+                    <span>Save Only</span>
                   </label>
                 </p>
               </div>
               <div class="input-field col s3">
                 <input id="amount_to_buy" placeholder="" type="number" step="any" class="validate">
-                <label for="amount_to_buy">Cantidad de tokens a comprar (<span id="token_symbol_text"></span>)</label>
-                <span class="helper-text">Cantidad de tokens a
-                  comprar si seleccionas la opcion guardar y comprar</span>
+                <label for="amount_to_buy">Amount of tokens to buy (<span id="token_symbol_text"></span>)</label>
+                <span class="helper-text">Amount of tokens to buy if you select the option to save and buy</span>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s4">
                 <input id="user_address" placeholder="" type="text" class="validate">
-                <label for="user_address">Tu dirección ERC20 para compras</label>
-                <span class="helper-text">Tu dirección ERC20 de
-                  Metamask/Trustwallet desde donde el bot compra tokens</span>
+                <label for="user_address">your ERC20 address for purchases</label>
+                <span class="helper-text">Your ERC20 address from Metamask/Trustwallet from where the bot purchases tokens</span>
               </div>
               <div class="input-field col s4">
                 <input id="user_address_sell" placeholder="" type="text" class="validate">
                 <label for="user_address_sell">Tu dirección ERC20 para hold</label>
-                <span class="helper-text">Tu dirección ERC20 de
-                  Metamask/Trustwallet donde el bot envia todos los tokens que compra (puede ser la misma que la
-                  anterior)</span>
+                <span class="helper-text">Your ERC20 address from Metamask/Trustwallet where the bot sends all the tokens it purchases (can be the same as the previous one)</span>
               </div>
               <div class="input-field col s4">
                 <input id="secret_pharse" type="text" class="validate" placeholder="">
-                <label for="secret_pharse">Clave privada de tu dirección ERC20 para compras</label>
-                <span class="helper-text">Puedes obtenerla en tu
-                  Metamask/Trustwallet</span>
+                <label for="secret_pharse">Private key of your ERC20 address for purchases</label>
+                <span class="helper-text">You can obtain it in your Metamask/Trustwallet</span>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s6">
                 <input id="us-router_contract" placeholder="" type="text" class="validate">
-                <label for="us-router_contract">Contrato Uniswap Router</label>
-                <span class="helper-text">No hace falta
-                  rellenarlo</span>
+                <label for="us-router_contract">Uniswap Router Contract</label>
+                <span class="helper-text">No need to fill it out</span>
               </div>
               <div class="input-field col s6">
                 <input id="weth_contract" placeholder="" type="text" class="validate">
-                <label for="weth_contract">Contrato WETH</label>
-                <span class="helper-text">No hace falta
-                  rellenarlo</span>
+                <label for="weth_contract">WETH Contrac</label>
+                <span class="helper-text">No need to fill it out</span>
               </div>
             </div>
 
             <div class="row">
               <div class="input-field col s5">
                 <input id="us-factory_contract" placeholder="" type="text" class="validate">
-                <label for="us-factory_contract">Contrato Uniswap Factory</label>
-                <span class="helper-text">No hace falta
-                  rellenarlo</span>
+                <label for="us-factory_contract">Uniswap Factory Contract</label>
+                <span class="helper-text">No need to fill it out</span>
               </div>
               <div class="input-field col s7">
                 <textarea id="rpc_node_url" rows="4" placeholder="" class="materialize-textarea"
                   data-length="300"></textarea>
-                <label for="">URLs RPC de la red Ethereum</label>
-                <span class="helper-text">Puedes varias urls separadas por (;) Usamos múltiples url para evitar el rate
-                  límit de los proveedores rpc. Cuanto más url pongas, menos fallos tendrá el bot</span>
+                  <label for="">Ethereum network RPC URLs</label>
+                  <span class="helper-text">You can vary URLs separated by (;) We use multiple URLs to avoid the rate limit of rpc providers. The more URLs you put, the fewer failures the bot will have</span>                  
               </div>
             </div>
             <h6 class="inner-title-config">Sniper</h6>
@@ -157,29 +139,27 @@
               <div class="col s3">
                 <p>
                   <label class="tooltipped" data-position="top"
-                    data-tooltip="En el modo con token el bot monitoriza el token que le pasas esperando a ver si le añaden la liquidez mínima asignada en el campo liquidez minima">
+                    data-tooltip="In token mode, the bot monitors the token you pass it, waiting to see if the minimum liquidity assigned in the minimum liquidity field is added">
                     <input id="with_token_mode" name="mode_group" type="radio" checked />
-                    <span>Modo con Token</span>
+                    <span>Token Mode</span>
                   </label>
                 </p>
                 <p>
                   <label class="tooltipped" data-position="bottom"
-                    data-tooltip="En el modo automático el bot monitoriza la red esperando a ver si se publica un nuevo token con la liquidez mínima asignada en el campo liquidez minima">
+                    data-tooltip="In automatic mode, the bot monitors the network waiting to see if a new token is published with the minimum liquidity assigned in the minimum liquidity field">
                     <input id="automatic_mode" name="mode_group" type="radio" />
-                    <span>Modo automático</span>
+                    <span>Automatic mode</span>
                   </label>
                 </p>
               </div>
               <div class="input-field col s3">
                 <input id="token_contract" placeholder="" type="text" class="validate">
-                <label for="token_contract">Dirección del Token</label>
-                <span class="helper-text">Si seleccionas Modo con Token, tienes que proporcionar la dirección del token
-                  al
-                  que quieres snipear</span>
+                <label for="token_contract">Token Address</label>
+                <span class="helper-text">If you select Token Mode, you need to provide the address of the token you want to snipe</span>
               </div>
               <div class="input-field col s3">
                 <input id="token_decimals" placeholder="" type="number" class="validate">
-                <label for="token_decimals">Número de decimales del token</label>
+                <label for="token_decimals">Number of decimals of the token</label>
                 <span class="helper-text">Número de decimales del
                   token que quieres snipear</span>
               </div>
@@ -254,27 +234,26 @@
               <div class="col s4">
                 <label>
                   <input class="filled-in" type="checkbox" id="sell_in_profits" />
-                  <span>Vender automáticamente los tokens con profits</span>
+                  <span>Automatically sell tokens with profit</span>
                 </label>
               </div>
               <div class="input-field col s4">
                 <input id="profit_percent" placeholder="" type="number" step="any" class="validate">
-                <label for="profit_percent">Porcentaje de profit para vender</label>
-                <span class="helper-text">Si el profit de un token es mayor o igual a este procentaje, el bot venderá
-                  dicho token automáticamente</span>
+                <label for="profit_percent">Percentage of profit to sell</label>
+                <span class="helper-text">If the profit of a token is greater or equal to this percentage, the bot will sell said token automatically</span>
               </div>
               <div class="col s4">
                 <label>
                   <input class="filled-in" type="checkbox" id="check_scam" />
-                  <span>Comprobar si un token podría ser SCAM (BETA: DYOR)</span>
+                  <span>Check if a token could be a SCAM (BETA: DYOR)</span>
                 </label>
               </div>
             </div>
           </div>
         </div>
         <div class="row save-btn">
-          <button id="reset-config" class="waves-effect waves-light btn red col s6">RESTABLECER</button>
-          <button id="save-config" class="waves-effect waves-light btn blue-grey col s6">GUARDAR</button>
+          <button id="reset-config" class="waves-effect waves-light btn red col s6">RESET</button>
+          <button id="save-config" class="waves-effect waves-light btn blue-grey col s6">SAVE</button>
         </div>
       </div>
 
@@ -324,21 +303,19 @@
           CANCELAR
       </div>
       <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-red btn-flat">CANCELAR</a>
-        <a href="#!" id="exit-app" class="modal-close waves-effect waves-green btn red">CONTINUAR</a>
+        <a href="#!" class="modal-close waves-effect waves-red btn-flat">CANCEL
+        </a>
+        <a href="#!" id="exit-app" class="modal-close waves-effect waves-green btn red">CONTINUE</a>
       </div>
     </div>
     <div id="modal_restart" class="modal bottom-sheet">
       <div class="modal-content">
         <h6>Uniswap Sniper Bot</h6>
-        <p>Al darle a CONTINUAR, el bot se reiniciará, cualquier operación pendiente se
-          interrumpirá. Usa esta acción cuando el bot no funcione correctamente.
-          Si deseas reiniciar el bot, dale click a CONTINUAR, de lo contrario dale click a
-          CANCELAR
+        <p>Upon clicking CONTINUE, the bot will restart, any pending operation will be interrupted. Use this action when the bot is not working correctly. If you wish to restart the bot, click CONTINUE, otherwise click CANCEL
       </div>
       <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-red btn-flat">CANCELAR</a>
-        <a href="#!" id="restart-bot" class="modal-close waves-effect waves-green btn red">CONTINUAR</a>
+        <a href="#!" class="modal-close waves-effect waves-red btn-flat">CANCEL</a>
+        <a href="#!" id="restart-bot" class="modal-close waves-effect waves-green btn red">CONTINUE</a>
       </div>
     </div>
   </div>
