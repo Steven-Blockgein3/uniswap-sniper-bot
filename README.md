@@ -1,19 +1,19 @@
-# Uniswap Sniper Bot 
+
+
+# Uniswap Sniper Bot
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-[Español] Uniswap Sniper Bot es una aplicación que te permite monitorizar la red Binance Smart Chain/Ethereum/Polygon en buscar de tokens nuevos con liquidez mayor que la mínima configurada
+[English] Uniswap Sniper Bot is an application that allows you to monitor the Binance Smart Chain/Ethereum/Polygon network in search of new tokens with liquidity greater than the minimum configured.
 
-[English] Uniswap Sniper Bot is an application that allows you to monitor the Binance Smart Chain/Ethereum/Polygon network in search of new tokens with liquidity greater than the minimum configured
+## How it works?
 
-## ¿Cómo funciona? / How it works?
-
-- [VER VIDEO][yt_channel] 
+- [WATCH VIDEO][yt_channel]
 - [CHECK VIDEO][yt_channel]
 
-## Instalación/Installation
+## Installation
 
-- Requiere/requires [Node.js](https://nodejs.org/) v12+
+- Requires [Node.js](https://nodejs.org/) v12+
 
 ```sh
 git clone https://github.com/meta-dapp/uniswap-sniper-bot.git
@@ -22,13 +22,13 @@ npm install
 npm start
 ```
 
-Para abrir con el devtool...
+To open with the devtool...
 
 ```sh
-npm star dev
+npm start dev
 ```
 
-## Licencia/License
+## License
 
 MIT
 **Uniswap Sniper Bot v1.0.0**
@@ -38,22 +38,21 @@ MIT
    [yt_channel]: <https://www.youtube.com/channel/UCdRihNiJ0tJ7xpFGKcwZcdQ>
    [pcs_link]: <https://github.com/meta-dapp/pcs-sniper-bot>
    [quickswap_link]: <https://github.com/meta-dapp/quickswap-sniper-bot>
-  
 
 # Changelog
-Todos los cambios notables de todas las versiones
+All notable changes for all versions.
 
 ## [1.0.2] - 02/08/2022
-### Novedades
-- Opción de venta automática y manual agregada
-- Detector de SCAM agregado (BETA: DYOR) ✅
-- Venta automática con take profit por porcentaje ✅
+### News
+- Added option for automatic and manual selling
+- Added SCAM detector (BETA: DYOR) ✅
+- Automatic selling with take profit by percentage ✅
 
 ## [1.0.1] - 26/07/2022
-### Novedades
-- Opción de compra automática en el Modo con Token
-- Opción de mostrar sólo Tokens verificados ✅
-- Opción para enviar alertas a Telegram al encontrar Token
+### News
+- Added option for automatic purchase in Token Mode
+- Added option to display only verified tokens ✅
+- Added option to send alerts to Telegram when finding a token
 
 ### Arreglos
 - Solucionado error: Liquidez no corresponde al Token agregado en Modo con Token
